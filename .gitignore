@@ -1,0 +1,15 @@
+# Dependencies — these are re-installed with `npm install`, never committed
+node_modules/
+
+# Build output
+dist/
+
+# Secrets & environment files
+.env
+
+# Logs
+*.log
+
+# OS junk
+.DS_Store
+Thumbs.db

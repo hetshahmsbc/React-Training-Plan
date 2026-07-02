@@ -1,0 +1,18 @@
+{
+  "name": "react-training-plan",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "day1": "node 10-Day-Handson/day1-modern-js/src/index.js",
+    "format": "prettier --write ."
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "React + TypeScript 10-day training plan hands-on exercises",
+  "dependencies": {
+    "eslint": "^10.6.0",
+    "prettier": "^3.9.4"
+  }
+}
