@@ -26,13 +26,13 @@ Day-01-Modern-JavaScript/
 
 ## What each file teaches
 
-| File | Focus |
-| --- | --- |
-| `employee.js` | Destructuring, default parameters, throwing on bad input, template literals |
+| File               | Focus                                                                           |
+| ------------------ | ------------------------------------------------------------------------------- |
+| `employee.js`      | Destructuring, default parameters, throwing on bad input, template literals     |
 | `employeeStore.js` | Immutable CRUD — every change returns a **new** array (spread, `map`, `filter`) |
-| `queries.js` | `filter` / `sort` / `reduce` for filtering, sorting, and totals |
-| `api.js` | `async`/`await`, Promises, and simulating network delay |
-| `index.js` | Putting it together and handling errors with `try`/`catch` |
+| `queries.js`       | `filter` / `sort` / `reduce` for filtering, sorting, and totals                 |
+| `api.js`           | `async`/`await`, Promises, and simulating network delay                         |
+| `index.js`         | Putting it together and handling errors with `try`/`catch`                      |
 
 ## Run the terminal version
 
@@ -62,7 +62,7 @@ Open the `http://localhost:5173/` link it prints. The mini-app gives you:
 - **Search** by name, **sort** by salary or name, and an **active-only** toggle
 - Live **stat cards**: total employees, active count, payroll, and average salary
 
-The important idea: React only adds the *screen* and the *state*. All the real
+The important idea: React only adds the _screen_ and the _state_. All the real
 work is still done by the same functions in `src/` — `addEmployee`,
 `updateEmployee`, `removeEmployee`, `byDepartment`, `sortBySalaryDesc`, and
 `totalPayroll`.

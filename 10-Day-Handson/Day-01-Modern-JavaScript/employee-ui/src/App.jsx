@@ -63,7 +63,9 @@ export default function App() {
     if (salaryNum < 0) return setError("Salary can't be negative.");
 
     if (editingId) {
-      setEmployees(updateEmployee(employees, editingId, { name: trimmed, department, salary: salaryNum }));
+      setEmployees(
+        updateEmployee(employees, editingId, { name: trimmed, department, salary: salaryNum }),
+      );
     } else {
       setEmployees(addEmployee(employees, { name: trimmed, department, salary: salaryNum }));
     }
@@ -104,7 +106,10 @@ export default function App() {
   const avg = employees.length ? Math.round(payroll / employees.length) : 0;
 
   // Filter dropdown = "All" + known departments + any others already in the data.
-  const filterOptions = ["All", ...new Set([...DEPARTMENTS, ...employees.map((e) => e.department)])];
+  const filterOptions = [
+    "All",
+    ...new Set([...DEPARTMENTS, ...employees.map((e) => e.department)]),
+  ];
 
   if (loading) {
     return (
@@ -144,13 +149,19 @@ export default function App() {
         <div className="form-grid">
           <label className="field">
             Name
-            <input value={name} onChange={(e) => setName(e.target.value)} placeholder="e.g. Ethan Hunt" />
+            <input
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+              placeholder="e.g. Ethan Hunt"
+            />
           </label>
           <label className="field">
             Department
             <select value={department} onChange={(e) => setDepartment(e.target.value)}>
               {DEPARTMENTS.map((d) => (
-                <option key={d} value={d}>{d}</option>
+                <option key={d} value={d}>
+                  {d}
+                </option>
               ))}
             </select>
           </label>
@@ -186,7 +197,9 @@ export default function App() {
         />
         <select value={filterDept} onChange={(e) => setFilterDept(e.target.value)}>
           {filterOptions.map((d) => (
-            <option key={d} value={d}>{d === "All" ? "All departments" : d}</option>
+            <option key={d} value={d}>
+              {d === "All" ? "All departments" : d}
+            </option>
           ))}
         </select>
         <select value={sortBy} onChange={(e) => setSortBy(e.target.value)}>
@@ -195,7 +208,11 @@ export default function App() {
           <option value="name">Name: A → Z</option>
         </select>
         <label className="checkbox">
-          <input type="checkbox" checked={activeOnly} onChange={(e) => setActiveOnly(e.target.checked)} />
+          <input
+            type="checkbox"
+            checked={activeOnly}
+            onChange={(e) => setActiveOnly(e.target.checked)}
+          />
           Active only
         </label>
       </div>
@@ -214,7 +231,9 @@ export default function App() {
           <tbody>
             {visible.map((e) => (
               <tr key={e.id}>
-                <td><strong>{e.name}</strong></td>
+                <td>
+                  <strong>{e.name}</strong>
+                </td>
                 <td>
                   <span className="badge" style={{ background: deptColor(e.department) }}>
                     {e.department}
@@ -231,15 +250,21 @@ export default function App() {
                 </td>
                 <td>
                   <div className="actions">
-                    <button className="btn btn-ghost btn-sm" onClick={() => startEdit(e)}>Edit</button>
-                    <button className="btn btn-danger btn-sm" onClick={() => handleRemove(e.id)}>Delete</button>
+                    <button className="btn btn-ghost btn-sm" onClick={() => startEdit(e)}>
+                      Edit
+                    </button>
+                    <button className="btn btn-danger btn-sm" onClick={() => handleRemove(e.id)}>
+                      Delete
+                    </button>
                   </div>
                 </td>
               </tr>
             ))}
             {visible.length === 0 && (
               <tr>
-                <td colSpan="5" className="empty">No employees match your filters.</td>
+                <td colSpan="5" className="empty">
+                  No employees match your filters.
+                </td>
               </tr>
             )}
           </tbody>
