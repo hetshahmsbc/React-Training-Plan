@@ -1,0 +1,9 @@
+* {
+  box-sizing: border-box;
+}
+:root {
+  color-scheme: light;
+}
+body {
+  margin: 0;
+}
