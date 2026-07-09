@@ -1,0 +1,15 @@
+// Layout — shared shell: <Navbar /> + <Outlet />. (Code in chat.)
+
+import { Outlet } from "react-router-dom";
+import Navbar from "./Navbar";
+
+export default function Layout() {
+  return (
+    <div className="app">
+      <Navbar />
+      <main className="content">
+        <Outlet />
+      </main>
+    </div>
+  );
+}
