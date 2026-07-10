@@ -1,0 +1,11 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", system-ui, -apple-system, Arial, sans-serif;
+  background: linear-gradient(180deg, #eef2ff 0%, #f8fafc 320px);
+  min-height: 100vh;
+  color: #0f172a;
+}

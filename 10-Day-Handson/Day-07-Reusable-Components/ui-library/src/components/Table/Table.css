@@ -1,0 +1,39 @@
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: white;
+}
+
+.table th,
+.table td {
+  padding: 12px 14px;
+  text-align: left;
+  border-bottom: 1px solid #e5e7eb;
+  font-size: 14px;
+}
+
+.table th {
+  background-color: #f8fafc;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: #64748b;
+}
+
+.table tbody tr {
+  transition: background-color 0.12s;
+}
+
+.table tbody tr:hover {
+  background-color: #f8fafc;
+}
+
+.table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.table-empty {
+  text-align: center;
+  padding: 36px 0;
+  color: #64748b;
+}
