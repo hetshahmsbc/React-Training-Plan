@@ -1,0 +1,44 @@
+/* ---------------------------------------------------------------
+   Global base styles + design tokens (CSS variables).
+   Feature-specific styles will go in src/styles/ later.
+   --------------------------------------------------------------- */
+
+:root {
+  /* Colors */
+  --color-bg: #f7f7fb;
+  --color-surface: #ffffff;
+  --color-text: #1f2430;
+  --color-muted: #6b7280;
+  --color-primary: #4f46e5;
+  --color-primary-hover: #4338ca;
+  --color-border: #e5e7eb;
+  --color-danger: #dc2626;
+
+  /* Spacing + shape */
+  --radius: 10px;
+  --shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  color: var(--color-text);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--color-bg);
+  min-height: 100vh;
+}
+
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+}
+
+button {
+  font: inherit;
+  cursor: pointer;
+}
